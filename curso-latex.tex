@@ -1,0 +1,187 @@
+\documentclass{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+%\usepackage{lmodern}
+
+\usepackage{listings}
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\lstset{language=TeX,
+    basicstyle=\small,
+    commentstyle=\color{mygreen},%
+    numbers=left,%
+    numberstyle={\small \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{documentclass,usepackage,begin,end},emphstyle=[1]\color{blue}, %some words to emphasise
+}
+
+\newcommand{\tbs}{\textbackslash}
+
+\author{Adriano Barbosa}
+\title{Introdu\c{c}\~ao ao \LaTeX}
+
+\begin{document}
+
+\begin{frame}
+	\maketitle
+\end{frame}
+
+\begin{frame}{O que \'e o \LaTeX?}
+    O \TeX \'e um sistema de tipografia criado por Donald Knuth em 1978.
+
+    \vspace{1cm}
+    \pause
+    
+    \LaTeX \'e um conjunto de macros para o \TeX, utilizado amplamente na
+    produ\c{c}\~ao de textos matem\'aticos e cient\'{\i}ficos, devido a sua alta qualidade
+    tipogr\'afica.
+\end{frame}
+
+\begin{frame}[fragile]{Software necess\'ario}
+    Um \textbf{editor}\footnote{O MS Word \'e um \textbf{processador} de texto.} de
+    texto ou um editor especializado para (La)TeX
+        \begin{enumerate}
+            \item Texmaker (\url{http://www.xm1math.net/texmaker/}) \\ GNU/Linux, BSDs, Windows e Mac OS
+            \item Kile (\url{https://kile.sourceforge.io/})\\ GNU/Linux e BSDs
+            \item TeXnicCenter (\url{http://www.texniccenter.org/})\\ MS Windows
+            \item TeXShop (\url{http://pages.uoregon.edu/koch/texshop/})\\ Mac OS
+        \end{enumerate}
+
+    \vspace{1cm}
+    Uma lista mais completa de editores est\'a dispon\'{\i}vel em:
+    \url{http://www.tug.org/interest.html#packages}
+\end{frame}
+
+\begin{frame}[fragile]{Software necess\'ario}
+    Uma distribui\c{c}\~ao (La)TeX
+        \begin{enumerate}
+            \item TeX Live (\url{https://tug.org/texlive/})\\ GNU/Linux, BSDs e MS Windows
+            \item MacTeX (\url{http://www.tug.org/mactex/})\\ Mac OS
+            \item MiKTeX (\url{https://miktex.org/})\\ MS Windows
+        \end{enumerate}
+
+    \vspace{1cm}
+    Uma lista mais completa de distrubui\c{c}\~oes est\'a dispon\'{\i}vel em:
+    \url{http://www.tug.org/interest.html#free}
+\end{frame}
+
+\begin{frame}{Instala\c{c}\~ao do Texmaker}
+    ...
+\end{frame}
+
+\begin{frame}{Instala\c{c}\~ao da distribui\c{c}\~ao}
+    ...
+\end{frame}
+
+\begin{frame}{O processo}
+    figura com pipeline de compila\c{c}\~ao
+\end{frame}
+
+\begin{frame}{Vocabul\'ario}
+    \begin{itemize}
+        \item .tex: arquivo (La)TeX (aquele que vamos escrever)
+        \item .dvi: acr\^onimo para DeVice-Independent
+        %\item .ps: linguagem PostScript %(linguagem de descri\c{c}\~ao de p\'aginas, originalmente criada para impress\~ao e posteriormente modificada para o uso com monitores)
+        \item .pdf: Portable Document Format
+        \item compilador\footnote{O processo de compila\c{c}\~ao tamb\'em gera outros
+        arquivos (.aux, .nav, .log, .out, .toc, etc)}: software respons\'avel por
+        gerar o arquivo de leitura (.pdf, .dvi, .ps, .html, etc) a partir do
+        arquivo .tex
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Utilit\'arios da distribui\c{c}\~ao}
+    \begin{enumerate}
+        \item Compiladores:
+            \begin{itemize}
+                \item tex: TeX $\rightarrow$ .dvi
+                \item pdftex: TeX $\rightarrow$ .pdf
+                \item latex: LaTeX $\rightarrow$ .dvi
+                \item pdflatex: LaTeX $\rightarrow$ .pdf
+            \end{itemize}
+        \pause 
+        \item Bibliografia:
+
+            .bib: arquivo contendo refer\^encias bibliogr\'aficas
+
+            .bbl: gerado ap\'os o processamento do arquivo .bib
+            \begin{itemize}
+                \item bibtex: .bib $\rightarrow$ .bbl
+            \end{itemize}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}[fragile]{Estrutura do arquivo .tex}
+   \lstinputlisting{exemplos/base.tex} 
+\end{frame}
+
+\begin{frame}{Comandos em \LaTeX}
+    \begin{centering}
+        \textbackslash comando[opcoes]\{parametros\}
+    \end{centering}
+
+    \vspace{1cm}
+    Exemplos:
+    \begin{itemize}
+        \item \textbackslash documentclass[10pt, a4paper]\{article\}
+        \item \tbs begin\{document\}
+        \item \textbackslash usepackage[utf8]\{inputenc\}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Tipos de documento}
+
+    Alguns par\^ametros (classes) para o comando \tbs documentclass s\~ao:
+    \begin{itemize}
+        \item article
+        \item book
+        \item report
+        \item letter
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Op\c{c}\~oes para \tbs documentclass}
+    \begin{itemize}
+        \item 12pt: define o tamanho da fonte para 12pt.
+        \item twocolumn: o texto do documento \'e disposto em duas colunas por p\'agina.
+        \item openright: faz com que os cap\'{\i}tulos da classe book comecem sempre
+        por p\'aginas \`a direita.
+        \item oneside e twoside: documento usa apenas a frente da folha ou
+        frente e verso, respectivamente.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Meu primeiro arquivo}
+   \lstinputlisting{exemplos/primeiro-arquivo.tex} 
+\end{frame}
+
+\begin{frame}[fragile]{Ambiente matem\'atico}
+    Equa\c{c}\~ao na mesma linha do texto:
+
+    \vspace{0.5cm}
+    Exemplo:
+    \lstdefinestyle{limpo}{ numbers=none }
+    \begin{lstlisting}[style=limpo]
+        Teorema de Pit\'agoras: $a^2=b^2+c^2$.
+    \end{lstlisting}
+
+    Resultado: \\
+    \begin{center}
+        Teorema de Pit\'agoras: $a^2=b^2+c^2$.
+    \end{center}
+\end{frame}
+
+\begin{frame}{Ambiente matem\'atico}
+    Equa\c{c}\~ao centralizada na p\'agina: \$\$...\$\$ \\
+    Ex.: Teorema de Pit\'agoras: $$a^2=b^2+c^2.$$
+\end{frame}
+
+\begin{frame}{Ambiente matem\'atico}
+    Equa\c{c}\~ao centralizada e numerada: \\
+    \tbs begin\{equation\} \\
+    ... \\
+    \tbs end\{equation\} \\
+    Ex.: Teorema de Pit\'agoras: \begin{equation}a^2=b^2+c^2.\end{equation}
+\end{frame}
+
+\end{document}
