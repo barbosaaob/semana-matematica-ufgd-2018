@@ -6,6 +6,7 @@
 
 \usepackage{listings}
 \definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\lstdefinestyle{limpo}{numbers=none}
 \lstset{language=TeX,
     basicstyle=\small,
     commentstyle=\color{mygreen},%
@@ -17,8 +18,11 @@
 
 \newcommand{\tbs}{\textbackslash}
 
-\author{Adriano Barbosa}
+\author{Adriano Barbosa\\
+    Semana da Matem\'atica UFGD
+}
 \title{Introdu\c{c}\~ao ao \LaTeX}
+\date{Agosto, 2018}
 
 \begin{document}
 
@@ -31,7 +35,7 @@
 
     \vspace{1cm}
     \pause
-    
+
     \LaTeX \'e um conjunto de macros para o \TeX, utilizado amplamente na
     produ\c{c}\~ao de textos matem\'aticos e cient\'{\i}ficos, devido a sua alta qualidade
     tipogr\'afica.
@@ -66,15 +70,82 @@
 \end{frame}
 
 \begin{frame}{Instala\c{c}\~ao do Texmaker}
-    ...
+    \begin{figure}[h]
+        \includegraphics[scale=0.25]{fig/texmaker-site.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Instala\c{c}\~ao do Texmaker}
+    \begin{figure}[h]
+        \includegraphics[scale=0.25]{fig/texmaker-01.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Instala\c{c}\~ao do Texmaker}
+    tela do texmaker
+    \begin{figure}[h]
+        \includegraphics[scale=0.25]{fig/texmaker-01.png}
+    \end{figure}
 \end{frame}
 
 \begin{frame}{Instala\c{c}\~ao da distribui\c{c}\~ao}
-    ...
+    \begin{figure}[h]
+        \includegraphics[scale=0.25]{fig/texlive-site.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Instala\c{c}\~ao da distribui\c{c}\~ao}
+    \begin{figure}[h]
+        \includegraphics[scale=0.25]{fig/texlive-01.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Instala\c{c}\~ao da distribui\c{c}\~ao}
+    \begin{figure}[h]
+        \includegraphics[scale=0.25]{fig/texlive-02.png}
+    \end{figure}
+\end{frame}
+
+% \begin{frame}{Instala\c{c}\~ao da distribui\c{c}\~ao}
+%     \begin{figure}[h]
+%         \includegraphics[scale=0.25]{fig/texlive-03.png}
+%     \end{figure}
+% \end{frame}
+
+\begin{frame}{Instala\c{c}\~ao da distribui\c{c}\~ao}
+    \begin{figure}[h]
+        \includegraphics[scale=0.25]{fig/texlive-04.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Instala\c{c}\~ao da distribui\c{c}\~ao}
+    \begin{figure}[h]
+        \includegraphics[scale=0.25]{fig/texlive-05.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Instala\c{c}\~ao da distribui\c{c}\~ao}
+    \begin{figure}[h]
+        \includegraphics[scale=0.25]{fig/texlive-06.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Instala\c{c}\~ao da distribui\c{c}\~ao}
+    \begin{figure}[h]
+        \includegraphics[scale=0.25]{fig/texlive-07.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Instala\c{c}\~ao da distribui\c{c}\~ao}
+    \begin{figure}[h]
+        \includegraphics[scale=0.25]{fig/texlive-08.png}
+    \end{figure}
 \end{frame}
 
 \begin{frame}{O processo}
-    figura com pipeline de compila\c{c}\~ao
+    \begin{figure}[h]
+        \includegraphics[width=\textwidth]{fig/pipeline.pdf}
+    \end{figure}
 \end{frame}
 
 \begin{frame}{Vocabul\'ario}
@@ -123,9 +194,8 @@
     \vspace{1cm}
     Exemplos:
     \begin{itemize}
-        \item \textbackslash documentclass[10pt, a4paper]\{article\}
+        \item \textbackslash documentclass[12pt, a4paper]\{article\}
         \item \tbs begin\{document\}
-        \item \textbackslash usepackage[utf8]\{inputenc\}
     \end{itemize}
 \end{frame}
 
@@ -137,51 +207,183 @@
         \item book
         \item report
         \item letter
+        \item abntex2
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Op\c{c}\~oes para \tbs documentclass}
-    \begin{itemize}
-        \item 12pt: define o tamanho da fonte para 12pt.
-        \item twocolumn: o texto do documento \'e disposto em duas colunas por p\'agina.
-        \item openright: faz com que os cap\'{\i}tulos da classe book comecem sempre
-        por p\'aginas \`a direita.
-        \item oneside e twoside: documento usa apenas a frente da folha ou
-        frente e verso, respectivamente.
-    \end{itemize}
-\end{frame}
+% \begin{frame}{Op\c{c}\~oes para \tbs documentclass}
+%     \begin{itemize}
+%         \item 12pt: define o tamanho da fonte para 12pt.
+%         \item twocolumn: o texto do documento \'e disposto em duas colunas por p\'agina.
+%         \item openright: faz com que os cap\'{\i}tulos da classe book comecem sempre
+%         por p\'aginas \`a direita.
+%         \item oneside e twoside: documento usa apenas a frente da folha ou
+%         frente e verso, respectivamente.
+%     \end{itemize}
+% \end{frame}
 
 \begin{frame}{Meu primeiro arquivo}
    \lstinputlisting{exemplos/primeiro-arquivo.tex} 
 \end{frame}
 
-\begin{frame}[fragile]{Ambiente matem\'atico}
-    Equa\c{c}\~ao na mesma linha do texto:
+\begin{frame}[fragile]{Acentua\c{c}\~ao}
+    \'E poss\'{\i}vel escrever com acentua\c{c}\~ao normal no \LaTeX.
 
-    \vspace{0.5cm}
-    Exemplo:
-    \lstdefinestyle{limpo}{ numbers=none }
+    \vspace{1cm}
+    Declare o uso do pacote inputenc no pre\^ambulo:
     \begin{lstlisting}[style=limpo]
-        Teorema de Pit\'agoras: $a^2=b^2+c^2$.
+        \usepackage[utf8]{inputenc}
+        ou
+        \usepackage[latin1]{inputenc}
+    \end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Espa\c{c}os e linhas}
+    Separar palavras com mais de um caractere se espa\c{c}o:
+    \begin{lstlisting}[style=limpo]
+        quarto    espa\c{c}os
+        quarto\ \ \ \ espa\c{c}os
     \end{lstlisting}
 
-    Resultado: \\
+    Resultado:
     \begin{center}
-        Teorema de Pit\'agoras: $a^2=b^2+c^2$.
+        quarto    espa\c{c}os
+
+        quarto\ \ \ \ espa\c{c}os
     \end{center}
 \end{frame}
 
-\begin{frame}{Ambiente matem\'atico}
-    Equa\c{c}\~ao centralizada na p\'agina: \$\$...\$\$ \\
-    Ex.: Teorema de Pit\'agoras: $$a^2=b^2+c^2.$$
+\begin{frame}[fragile]{Espa\c{c}os e linhas}
+    Separando linhas:
+    \begin{lstlisting}[style=limpo]
+        Primeira frase. \\
+        Segunda frase.
+
+        ou
+
+        Primeira frase.
+
+        Segunda frase.
+
+        ou
+
+        Primeira frase. \newline
+        Segunda frase.
+    \end{lstlisting}
+
+    Resultado:
+    \begin{center}
+        Primeira frase. \\
+        Segunda frase.
+    \end{center}
 \end{frame}
 
-\begin{frame}{Ambiente matem\'atico}
-    Equa\c{c}\~ao centralizada e numerada: \\
-    \tbs begin\{equation\} \\
-    ... \\
-    \tbs end\{equation\} \\
-    Ex.: Teorema de Pit\'agoras: \begin{equation}a^2=b^2+c^2.\end{equation}
+\begin{frame}{TCC}
+    \begin{center}
+        Vamos estruturar um TCC!
+    \end{center}
 \end{frame}
+
+% \begin{frame}[fragile]{Ambiente matem\'atico}
+%     Equa\c{c}\~ao na mesma linha do texto:
+
+%     \vspace{0.5cm}
+%     Exemplo:
+%     \begin{lstlisting}[style=limpo]
+%         Teorema de Pit\'agoras: $a^2=b^2+c^2$.
+%     \end{lstlisting}
+
+%     Resultado:
+%     \begin{center}
+%         Teorema de Pit\'agoras: $a^2=b^2+c^2$.
+%     \end{center}
+% \end{frame}
+
+% \begin{frame}[fragile]{Ambiente matem\'atico}
+%     Equa\c{c}\~ao centralizada na p\'agina:
+
+%     \vspace{0.5cm}
+%     Exemplo:
+%     \begin{lstlisting}[style=limpo]
+%         Teorema de Pit\'agoras: $$a^2=b^2+c^2.$$
+%         ou
+%         Teorema de Pit\'agoras: \[a^2=b^2+c^2.\]
+%     \end{lstlisting}
+
+%     Resultado:
+%     \begin{center}
+%         Teorema de Pit\'agoras: $$a^2=b^2+c^2.$$
+%     \end{center}
+% \end{frame}
+
+% \begin{frame}[fragile]{Ambiente matem\'atico}
+%     Equa\c{c}\~ao centralizada e numerada:
+
+%     \vspace{0.5cm}
+%     Exemplo:
+%     \begin{lstlisting}[style=limpo]
+%         Teorema de Pit\'agoras:
+%         \begin{equation}
+%             a^2=b^2+c^2.
+%         \end{equation}
+%     \end{lstlisting}
+
+%     Resultado:
+%     \begin{center}
+%         Teorema de Pit\'agoras:
+%         \begin{equation}
+%             a^2=b^2+c^2.
+%         \end{equation}
+%     \end{center}
+% \end{frame}
+
+% \begin{frame}[fragile]{Figuras}
+%     Inserir figuras:
+%     \begin{lstlisting}[style=limpo]
+%         \usepackage{graphicx}
+%         ...
+%         \begin{figure}[posicao]
+%             \includegraphics[opcao]{arquivo_da_figura}
+%         \end{figure}
+%     \end{lstlisting}
+
+%     Resultado:
+%     \begin{figure}[h]
+%         \includegraphics[scale=0.1]{fig/maceio.jpg}
+%     \end{figure}
+% \end{frame}
+
+% \begin{frame}[fragile]{Tabelas}
+%     Inserir uma tabela:
+%     \begin{lstlisting}[style=limpo]
+%         \begin{tabular}{|c|c|}
+%             \hline
+%             a & b \\
+%             \hline
+%             c & d \\
+%             \hline
+%         \end{tabular}
+%     \end{lstlisting}
+
+%     Resultado:
+%     \begin{center}
+%         \begin{tabular}{|c|c|}
+%             \hline
+%             a & b \\
+%             \hline
+%             c & d \\
+%             \hline
+%         \end{tabular}
+%     \end{center}
+% \end{frame}
+
+% \begin{frame}{abnTeX}
+% \end{frame}
+
+% \begin{frame}{Tradu\c{c}\~ao}
+% \end{frame}
+
+% \begin{frame}{Bibliografia}
+% \end{frame}
 
 \end{document}

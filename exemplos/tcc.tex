@@ -1,0 +1,52 @@
+\documentclass{abntex2}
+
+% essa linha eh um comentario!
+
+\usepackage[utf8]{inputenc}  % acentuacao
+
+\usepackage{lipsum}  % gerador de lero-lero
+
+\usepackage{amsthm}  % coisas matematicas
+\newtheorem{definicao}{Definição}[section]  % ambiente definicao
+\newtheorem{teorema}{Teorema}[chapter]  % ambiente teorema
+
+\author{Adriano}
+\title{Meu querido TCC}
+
+\begin{document}
+\maketitle
+
+\chapter{Introdução}
+\lipsum[1-8]
+
+\chapter{Matemática: diversão!}
+$a^2=b^2+c^2$
+
+$$a^2=b^2+c^2$$
+
+\begin{equation}
+	a^2=b^2+c^2
+	\label{pitagoras}
+\end{equation}
+
+\begin{definicao}
+	Uma antiderivada de uma função $f$ em $I$ é uma função $F$ tal que $F'(x)=f(x),\forall x\in I$.
+\end{definicao}
+
+\begin{teorema}(Teorema Fundamental do Cálculo)
+	\[\int_a^b f(x) dx = F(b)-F(a).\]
+	\label{tfc}
+\end{teorema}
+\begin{proof}
+	\lipsum[1]
+\end{proof}
+
+Pelo Teorema \ref{tfc} e por Pitágoras (equação \ref{pitagoras}), segue o resultado... 
+
+\begin{teorema}
+	Esse é mais um teorema...
+\end{teorema}
+
+
+
+\end{document}
