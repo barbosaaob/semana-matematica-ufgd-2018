@@ -28,6 +28,7 @@ tabelas
     tamanho da celula
     \listoftables
 bibliografia abntex2cite
+indice remissivo \makeindex
 elementos pretextuais
 elementos postextuais
 poster
