@@ -1,15 +1,34 @@
 criar arquivo com classe abntex2
 pacote de acentuação
 comentário
+autor, título, data, instituicao (\imprimircapa)
 \chapter e lero-lero
-autor e título (\maketitle)
+    diferenca entre abntex2 e book
+    tradução
+\section
 ambiente matemático
 definição e teorema (amsthm)
-prova do teorema
+    numeração por capítulo e seção
+    prova do teorema
 reordenar os teoremas
 referenciar o teorema e equação
-
-figuras
-tradução
+figuras (graphicx)
+    htb
+    centralizada
+    a direita
+    legenda
+    legenda em cima da figura
+    width
+    height
+    lado a lado - duplo includegraphics
+    lado a lado - subcaption e subfigure
+    referenciar
+    \listoffigures
 tabelas
-
+    tamanho da celula
+    \listoftables
+bibliografia abntex2cite
+elementos pretextuais
+elementos postextuais
+poster
+apresentação

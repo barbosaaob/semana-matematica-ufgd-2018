@@ -18,11 +18,26 @@
 
 \newcommand{\tbs}{\textbackslash}
 
-\author{Adriano Barbosa\\
-    Semana da Matem\'atica UFGD
-}
+\author[Adriano Barbosa]{Prof. Adriano Oliveira Barbosa}
 \title{Introdu\c{c}\~ao ao \LaTeX}
+\subtitle[Semana da Matem\'atica]{VII Semana Acad\^emica da Matem\'atica UFGD}
 \date{Agosto, 2018}
+
+\beamertemplatenavigationsymbolsempty
+%\usetheme{Warsaw}
+%\setbeamercolor{normal text}{fg=white,bg=black!90}
+%\setbeamercolor{structure}{fg=white}
+%\setbeamercolor{alerted text}{fg=red!85!black}
+%\setbeamercolor{item projected}{use=item,fg=black,bg=item.fg!35}
+%\setbeamercolor*{palette primary}{use=structure,fg=structure.fg}
+%\setbeamercolor*{palette secondary}{use=structure,fg=structure.fg!95!black}
+%\setbeamercolor*{palette tertiary}{use=structure,fg=structure.fg!90!black}
+%\setbeamercolor*{palette quaternary}{use=structure,fg=structure.fg!95!black,bg=black!80}
+%\setbeamercolor*{framesubtitle}{fg=white}
+%\setbeamercolor*{block title}{parent=structure,bg=black!60}
+%\setbeamercolor*{block body}{fg=black,bg=black!10}
+%\setbeamercolor*{block title alerted}{parent=alerted text,bg=black!15}
+%\setbeamercolor*{block title example}{parent=example text,bg=black!15}
 
 \begin{document}
 
@@ -82,9 +97,8 @@
 \end{frame}
 
 \begin{frame}{Instala\c{c}\~ao do Texmaker}
-    tela do texmaker
     \begin{figure}[h]
-        \includegraphics[scale=0.25]{fig/texmaker-01.png}
+        \includegraphics[scale=0.25]{fig/texmaker-02.png}
     \end{figure}
 \end{frame}
 
@@ -238,8 +252,8 @@
     \end{lstlisting}
 \end{frame}
 
-\begin{frame}[fragile]{Espa\c{c}os e linhas}
-    Separar palavras com mais de um caractere se espa\c{c}o:
+\begin{frame}[fragile]{Espa\c{c}os}
+    Separar palavras com mais de um caractere de espa\c{c}o:
     \begin{lstlisting}[style=limpo]
         quarto    espa\c{c}os
         quarto\ \ \ \ espa\c{c}os
@@ -253,28 +267,28 @@
     \end{center}
 \end{frame}
 
-\begin{frame}[fragile]{Espa\c{c}os e linhas}
+\begin{frame}[fragile]{Linhas}
     Separando linhas:
     \begin{lstlisting}[style=limpo]
-        Primeira frase. \\
-        Segunda frase.
+        Primeira linha. \\
+        Segunda linha.
 
         ou
 
-        Primeira frase.
+        Primeira linha.
 
-        Segunda frase.
+        Segunda linha.
 
         ou
 
-        Primeira frase. \newline
-        Segunda frase.
+        Primeira linha. \newline
+        Segunda linha.
     \end{lstlisting}
 
     Resultado:
     \begin{center}
-        Primeira frase. \\
-        Segunda frase.
+        Primeira linha. \\
+        Segunda linha.
     \end{center}
 \end{frame}
 
@@ -283,107 +297,5 @@
         Vamos estruturar um TCC!
     \end{center}
 \end{frame}
-
-% \begin{frame}[fragile]{Ambiente matem\'atico}
-%     Equa\c{c}\~ao na mesma linha do texto:
-
-%     \vspace{0.5cm}
-%     Exemplo:
-%     \begin{lstlisting}[style=limpo]
-%         Teorema de Pit\'agoras: $a^2=b^2+c^2$.
-%     \end{lstlisting}
-
-%     Resultado:
-%     \begin{center}
-%         Teorema de Pit\'agoras: $a^2=b^2+c^2$.
-%     \end{center}
-% \end{frame}
-
-% \begin{frame}[fragile]{Ambiente matem\'atico}
-%     Equa\c{c}\~ao centralizada na p\'agina:
-
-%     \vspace{0.5cm}
-%     Exemplo:
-%     \begin{lstlisting}[style=limpo]
-%         Teorema de Pit\'agoras: $$a^2=b^2+c^2.$$
-%         ou
-%         Teorema de Pit\'agoras: \[a^2=b^2+c^2.\]
-%     \end{lstlisting}
-
-%     Resultado:
-%     \begin{center}
-%         Teorema de Pit\'agoras: $$a^2=b^2+c^2.$$
-%     \end{center}
-% \end{frame}
-
-% \begin{frame}[fragile]{Ambiente matem\'atico}
-%     Equa\c{c}\~ao centralizada e numerada:
-
-%     \vspace{0.5cm}
-%     Exemplo:
-%     \begin{lstlisting}[style=limpo]
-%         Teorema de Pit\'agoras:
-%         \begin{equation}
-%             a^2=b^2+c^2.
-%         \end{equation}
-%     \end{lstlisting}
-
-%     Resultado:
-%     \begin{center}
-%         Teorema de Pit\'agoras:
-%         \begin{equation}
-%             a^2=b^2+c^2.
-%         \end{equation}
-%     \end{center}
-% \end{frame}
-
-% \begin{frame}[fragile]{Figuras}
-%     Inserir figuras:
-%     \begin{lstlisting}[style=limpo]
-%         \usepackage{graphicx}
-%         ...
-%         \begin{figure}[posicao]
-%             \includegraphics[opcao]{arquivo_da_figura}
-%         \end{figure}
-%     \end{lstlisting}
-
-%     Resultado:
-%     \begin{figure}[h]
-%         \includegraphics[scale=0.1]{fig/maceio.jpg}
-%     \end{figure}
-% \end{frame}
-
-% \begin{frame}[fragile]{Tabelas}
-%     Inserir uma tabela:
-%     \begin{lstlisting}[style=limpo]
-%         \begin{tabular}{|c|c|}
-%             \hline
-%             a & b \\
-%             \hline
-%             c & d \\
-%             \hline
-%         \end{tabular}
-%     \end{lstlisting}
-
-%     Resultado:
-%     \begin{center}
-%         \begin{tabular}{|c|c|}
-%             \hline
-%             a & b \\
-%             \hline
-%             c & d \\
-%             \hline
-%         \end{tabular}
-%     \end{center}
-% \end{frame}
-
-% \begin{frame}{abnTeX}
-% \end{frame}
-
-% \begin{frame}{Tradu\c{c}\~ao}
-% \end{frame}
-
-% \begin{frame}{Bibliografia}
-% \end{frame}
 
 \end{document}
